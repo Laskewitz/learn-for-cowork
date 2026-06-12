@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A Cowork plugin that connects to the Microsoft Learn MCP Server.",
   "scripts": {
-    "package": "pwsh -Command \"Compress-Archive -Path manifest.json, color.png, outline.png, mcp-tool-description.md -DestinationPath learn-for-cowork.zip -Force\""
+    "package": "pwsh -Command \"Compress-Archive -Path manifest.json, color.png, outline.png, mcp-tool-description.txt -DestinationPath learn-for-cowork.zip -Force\""
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,9 @@
   },
   "homepage": "https://github.com/Laskewitz/learn-for-cowork#readme",
   "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-draft-04": "^1.0.0",
+    "ajv-formats": "^3.0.1",
     "sharp": "^0.35.1"
   }
 }
