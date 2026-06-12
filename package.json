@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/Laskewitz/learn-mcp-cowork/issues"
   },
-  "homepage": "https://github.com/Laskewitz/learn-mcp-cowork#readme"
+  "homepage": "https://github.com/Laskewitz/learn-mcp-cowork#readme",
+  "dependencies": {
+    "sharp": "^0.35.1"
+  }
 }
