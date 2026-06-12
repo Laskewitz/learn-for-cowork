@@ -1,14 +1,21 @@
 ---
 name: learn-deck
 description: |
-  Creates a PowerPoint presentation on a Microsoft technology topic using Learn documentation.
-  Use when user asks to "create a deck", "make a presentation", "build slides",
-  "PowerPoint about", "slide deck on", or wants a presentation summarizing
-  a Microsoft technology, service, or concept.
+  Creates a PowerPoint presentation on a Microsoft technology topic using Microsoft
+  Learn documentation as the researched source. Use when user asks to "create a deck",
+  "make a presentation", "build slides", "PowerPoint about", or "slide deck on" a
+  Microsoft technology, service, or concept — where the content should be grounded in
+  Microsoft Learn.
+  Do NOT use for one-page summary documents (use learn-onepager instead), or for
+  building a deck from content the user already supplies or from non-Learn sources
+  (use the built-in pptx skill instead). This skill is specifically Learn-researched decks.
 license: MIT
+cowork:
+  category: productivity
+  icon: Presentation
 metadata:
   author: Daniel Laskewitz
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Learn Deck
@@ -60,6 +67,24 @@ Use the PowerPoint skill to generate the presentation with:
 - One key idea per slide
 - Speaker notes with additional detail from the research
 - Links to source documentation in the notes
+
+## When NOT to Use
+
+- The user wants a **one-page Word summary**, not slides → use `learn-onepager`.
+- The user already has the content and just needs it formatted into a deck, or the
+  source is not Microsoft Learn → use the built-in `pptx` skill directly.
+- The topic is not a Microsoft technology, service, or concept.
+
+## Guardrails
+
+- **Ground every claim in retrieved Microsoft Learn content.** Do not state features,
+  limits, pricing, or capabilities that did not appear in a search result.
+- **Never fabricate** API names, version numbers, code samples, or links. If research
+  doesn't cover a planned slide, drop the slide or mark it `[needs verification]`.
+- Include the source documentation URL (verbatim from search results) in speaker notes
+  for each researched claim.
+- If research returns little or nothing on the topic, tell the user and ask whether to
+  narrow or change the topic rather than filling gaps from memory.
 
 ## Guidelines
 

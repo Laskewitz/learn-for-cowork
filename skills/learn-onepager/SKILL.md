@@ -1,14 +1,22 @@
 ---
 name: learn-onepager
 description: |
-  Creates a Word one-pager document on a Microsoft technology topic using Learn documentation.
-  Use when user asks to "create a one-pager", "make a summary document", "write a one-page overview",
-  "Word document about", "one-page brief on", or wants a concise single-page
-  reference document about a Microsoft technology, service, or concept.
+  Creates a concise single-page Word document on a Microsoft technology topic using
+  Microsoft Learn documentation as the researched source. Use when user asks to
+  "create a one-pager", "make a summary document", "write a one-page overview",
+  "one-page brief on", or wants a concise single-page reference about a Microsoft
+  technology, service, or concept — grounded in Microsoft Learn.
+  Do NOT use for slide decks or presentations (use learn-deck instead), for multi-page
+  reports, or for formatting content the user already supplies / non-Learn sources
+  (use the built-in docx skill instead). This skill is specifically Learn-researched
+  one-pagers.
 license: MIT
+cowork:
+  category: productivity
+  icon: DocumentOnePage
 metadata:
   author: Daniel Laskewitz
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Learn One-Pager
@@ -61,6 +69,24 @@ Use the Word document skill to generate a polished one-pager with:
 - Bold key terms for emphasis
 - A clean, readable layout
 - Source links at the bottom
+
+## When NOT to Use
+
+- The user wants **slides or a presentation**, not a document → use `learn-deck`.
+- The user wants a multi-page report, or already has the content / a non-Learn source
+  → use the built-in `docx` skill directly.
+- The topic is not a Microsoft technology, service, or concept.
+
+## Guardrails
+
+- **Ground every claim in retrieved Microsoft Learn content.** Do not state benefits,
+  requirements, pricing, or capabilities that did not appear in a search result.
+- **Never fabricate** product names, numbers, quotes, or links. If a planned section
+  isn't supported by research, omit it or mark it `[needs verification]`.
+- Place source documentation URLs (verbatim from search results) in the "Learn More"
+  section.
+- If research returns little or nothing, tell the user and ask whether to narrow or
+  change the topic rather than filling gaps from memory.
 
 ## Guidelines
 
