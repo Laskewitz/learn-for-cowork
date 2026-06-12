@@ -30,9 +30,6 @@
       "toolSource": {
         "remoteMcpServer": {
           "mcpServerUrl": "https://learn.microsoft.com/api/mcp",
-          "mcpToolDescription": {
-            "file": "mcp-tool-description.txt"
-          },
           "authorization": {
             "type": "None"
           }
