@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
   "name": {
-    "short": "Microsoft Learn",
-    "full": "Microsoft Learn MCP Server"
+    "short": "Microsoft Learn for Cowork",
+    "full": "Microsoft Learn for Cowork"
   },
   "description": {
     "short": "Search Microsoft Learn documentation via MCP.",
@@ -30,7 +30,9 @@
       "toolSource": {
         "remoteMcpServer": {
           "mcpServerUrl": "https://learn.microsoft.com/api/mcp",
-          "mcpToolDescription": "Use this connector to search Microsoft Learn documentation, fetch articles, and find code samples from official Microsoft docs.",
+          "mcpToolDescription": {
+            "file": "mcp-tool-description.md"
+          },
           "authorization": {
             "type": "None"
           }
