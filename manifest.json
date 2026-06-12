@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.28/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.28",
+  "version": "1.0.0",
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "packageName": "com.cowork.plugin.learn-mcp",
+  "name": {
+    "short": "Microsoft Learn",
+    "full": "Microsoft Learn MCP Server"
+  },
+  "description": {
+    "short": "Search Microsoft Learn documentation via MCP.",
+    "full": "A Cowork plugin that connects to the Microsoft Learn MCP server, enabling search through official Microsoft documentation and code samples."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#2B579A",
+  "developer": {
+    "name": "Microsoft Learn",
+    "websiteUrl": "https://learn.microsoft.com",
+    "privacyUrl": "https://privacy.microsoft.com/privacystatement",
+    "termsOfUseUrl": "https://learn.microsoft.com/legal/termsofuse"
+  },
+  "agentConnectors": [
+    {
+      "id": "microsoft-learn",
+      "displayName": "Microsoft Learn MCP Server",
+      "description": "Remote MCP server providing tools to search Microsoft Learn documentation and code samples.",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://learn.microsoft.com/api/mcp",
+          "authorization": {
+            "type": "None"
+          }
+        }
+      }
+    }
+  ]
+}
