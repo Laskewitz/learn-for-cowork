@@ -11,9 +11,6 @@ description: |
   (use the built-in docx skill instead). This skill is specifically Learn-researched
   one-pagers.
 license: MIT
-cowork:
-  category: productivity
-  icon: DocumentOnePage
 metadata:
   author: Daniel Laskewitz
   version: "1.1"

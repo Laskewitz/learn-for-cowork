@@ -10,9 +10,6 @@ description: |
   building a deck from content the user already supplies or from non-Learn sources
   (use the built-in pptx skill instead). This skill is specifically Learn-researched decks.
 license: MIT
-cowork:
-  category: productivity
-  icon: Presentation
 metadata:
   author: Daniel Laskewitz
   version: "1.1"
