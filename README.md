@@ -50,6 +50,10 @@ learn-for-cowork.zip
         └── SKILL.md
 ```
 
+## 📥 Download
+
+Grab the latest `learn-for-cowork.zip` from the [Releases](https://github.com/Laskewitz/learn-for-cowork/releases/latest) page.
+
 ## ⚙️ Plugin details
 
 | Field | Value |
