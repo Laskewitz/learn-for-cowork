@@ -17,10 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create release archive
-        run: |
-          zip -r learn-for-cowork-v${{ github.event.inputs.version }}.zip . \
-            -x '.git/*' -x '.github/*' -x 'node_modules/*'
+      - name: Package plugin
+        run: zip learn-for-cowork.zip manifest.json color.png outline.png -r skills
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -28,4 +26,4 @@ jobs:
           tag_name: v${{ github.event.inputs.version }}
           name: v${{ github.event.inputs.version }}
           generate_release_notes: true
-          files: learn-for-cowork-v${{ github.event.inputs.version }}.zip
+          files: learn-for-cowork.zip
