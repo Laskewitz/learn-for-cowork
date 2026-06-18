@@ -13,7 +13,7 @@ description: |
 license: MIT
 metadata:
   author: Daniel Laskewitz
-  version: "1.1"
+  version: "1.2"
 ---
 
 # Learn One-Pager
@@ -22,14 +22,26 @@ A skill for creating concise Word one-pager documents based on thorough research
 
 ## Workflow
 
-### Step 1: Clarify the Topic
+### Step 1: Confirm Topic, Size, and Audience
 
-Ask the user what topic they want a one-pager on. Help them scope it:
+**Do not start researching until the user has confirmed all three of the following.**
+Ask about any that are missing, then briefly restate them back and get explicit
+confirmation before moving on.
 
-- "What Microsoft technology or topic would you like me to create a one-pager about?"
-- If the topic is broad (e.g., "Power Platform"), ask them to be more specific (e.g., "Power Automate cloud flows" or "Dataverse for Teams")
-- Ask about the target audience (developers, decision makers, IT admins, mixed)
-- Ask if there's a specific angle (overview, comparison, getting started, best practices)
+1. **Topic** — What Microsoft technology or topic the one-pager should cover.
+   - If the topic is broad (e.g., "Power Platform"), ask them to be more specific (e.g., "Power Automate cloud flows" or "Dataverse for Teams").
+2. **Size** — How much detail and length the document should have. Offer these options:
+   - **1 page** — a single concise summary page
+   - **Medium** — a fuller single page (denser sections)
+   - **Large** — roughly two pages
+   - **Extra large** — a multi-page brief (3+ pages)
+3. **Audience** — Who the document is for. Offer these options:
+   - **Business decision makers**
+   - **IT pros**
+   - **Developers**
+   - Or another audience the user specifies (e.g., mixed)
+
+Only proceed to research once the topic, size, and audience are all confirmed.
 
 ### Step 2: Research the Topic
 
@@ -46,7 +58,12 @@ Use the `microsoft-learn` connector's `search` and `get_page` tools to thoroughl
 
 ### Step 3: Structure the One-Pager
 
-Organize your research into a clear one-page format:
+Organize your research into a clear format. **Tailor the depth and length to the
+confirmed size**, and pitch the content to the confirmed audience (e.g., business
+decision makers want value and outcomes; developers want technical detail):
+
+For a **1 page** document, keep every section tight. For **Medium / Large / Extra
+large**, expand the sections below with more detail and examples to fill the length:
 
 1. **Title and Tagline** — Clear name with a one-sentence value proposition
 2. **What Is It?** — 2-3 sentence overview
@@ -88,8 +105,9 @@ Use the `docx` skill to generate a polished one-pager with:
 ## Guidelines
 
 - Always let the user choose the topic — never assume
+- Confirm topic, size, and audience before researching
 - Be thorough in research: multiple searches are better than one
-- Keep it to ONE page — be ruthless about brevity
+- Match the length to the confirmed size — be ruthless about brevity for a 1 page document
 - Every sentence must earn its place
 - Use plain language appropriate for the audience
 - Include source links for credibility

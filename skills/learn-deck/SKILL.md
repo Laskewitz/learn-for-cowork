@@ -12,7 +12,7 @@ description: |
 license: MIT
 metadata:
   author: Daniel Laskewitz
-  version: "1.1"
+  version: "1.2"
 ---
 
 # Learn Deck
@@ -21,14 +21,26 @@ A skill for creating PowerPoint presentations based on thorough research from Mi
 
 ## Workflow
 
-### Step 1: Clarify the Topic
+### Step 1: Confirm Topic, Size, and Audience
 
-Ask the user what topic they want a presentation on. Help them narrow it down:
+**Do not start researching until the user has confirmed all three of the following.**
+Ask about any that are missing, then briefly restate them back and get explicit
+confirmation before moving on.
 
-- "What Microsoft technology or topic would you like me to create a deck about?"
-- If the topic is broad (e.g., "Azure"), ask them to be more specific (e.g., "Azure Functions" or "Microsoft Copilot Studio")
-- Ask about the target audience (technical, business, mixed)
-- Ask about the desired length (5-10 slides, 10-15 slides, etc.)
+1. **Topic** — What Microsoft technology or topic the deck should cover.
+   - If the topic is broad (e.g., "Azure"), ask them to be more specific (e.g., "Azure Functions" or "Microsoft Copilot Studio").
+2. **Size** — How large the deck should be. Offer these options:
+   - **1 slide** — a single summary slide
+   - **Medium** — a short deck (roughly 5-8 slides)
+   - **Large** — a standard deck (roughly 9-15 slides)
+   - **Extra large** — an in-depth deck (16+ slides)
+3. **Audience** — Who the deck is for. Offer these options:
+   - **Business decision makers**
+   - **IT pros**
+   - **Developers**
+   - Or another audience the user specifies (e.g., mixed)
+
+Only proceed to research once the topic, size, and audience are all confirmed.
 
 ### Step 2: Research the Topic
 
@@ -45,7 +57,12 @@ Use the `microsoft-learn` connector's `search` and `get_page` tools to thoroughl
 
 ### Step 3: Structure the Presentation
 
-Organize your research into a logical slide structure:
+Organize your research into a logical slide structure. **Tailor the depth and number
+of slides to the confirmed size**, and pitch the content to the confirmed audience
+(e.g., business decision makers want value and outcomes; developers want APIs and code):
+
+For a **1 slide** deck, condense everything into a single high-impact summary slide.
+For **Medium / Large / Extra large** decks, scale the sections below up or down to fit:
 
 1. **Title Slide** — Topic name and subtitle
 2. **Overview** — What it is and why it matters
@@ -86,6 +103,7 @@ Use the `pptx` skill to generate the presentation with:
 ## Guidelines
 
 - Always let the user choose the topic — never assume
+- Confirm topic, size, and audience before researching
 - Be thorough in research: multiple searches are better than one
 - Keep slides concise — detail goes in speaker notes
 - Include source links for credibility
